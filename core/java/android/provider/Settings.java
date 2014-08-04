@@ -3090,6 +3090,16 @@ public final class Settings {
             "lock_pattern_tactile_feedback_enabled";
 
         /**
+         * Whether to scramble a pin unlock layout
+         * @hide
+         */
+        public static final String HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT =
+                "lockscreen_scramble_pin_layout";
+        /** @hide */
+        private static final Validator HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * A formatted string of the next alarm that is set, or the empty string
          * if there is no alarm set.
          *
@@ -4422,6 +4432,7 @@ public final class Settings {
             HASH_BATTERY_LIGHT_REALLYFULL_COLOR,
             HASH_DOUBLE_TAP_SLEEP_GESTURE,
             HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN,
+            HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT,
         };
 
         /**
@@ -4564,6 +4575,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_BATTERY_LIGHT_REALLYFULL_COLOR);
             PRIVATE_SETTINGS.add(HASH_DOUBLE_TAP_SLEEP_GESTURE);
             PRIVATE_SETTINGS.add(HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN);
+            PRIVATE_SETTINGS.add(HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT);
         }
 
         /**
@@ -4685,6 +4697,7 @@ public final class Settings {
             VALIDATORS.put(HASH_BATTERY_LIGHT_REALLYFULL_COLOR, HASH_BATTERY_LIGHT_REALLYFULL_COLOR_VALIDATOR);
             VALIDATORS.put(HASH_DOUBLE_TAP_SLEEP_GESTURE, HASH_DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR);
             VALIDATORS.put(HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN, HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN_VALIDATOR);
+            VALIDATORS.put(HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT, HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT);
         }
 
         /**
