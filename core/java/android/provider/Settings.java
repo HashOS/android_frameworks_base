@@ -3100,6 +3100,16 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * Whether to use the custom quick unlock screen control
+         * @hide
+         */
+        public static final String HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL =
+                "lockscreen_quick_unlock_control";
+        /** @hide */
+        private static final Validator HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * A formatted string of the next alarm that is set, or the empty string
          * if there is no alarm set.
          *
@@ -4433,6 +4443,7 @@ public final class Settings {
             HASH_DOUBLE_TAP_SLEEP_GESTURE,
             HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN,
             HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT,
+            HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL,
         };
 
         /**
@@ -4576,6 +4587,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_DOUBLE_TAP_SLEEP_GESTURE);
             PRIVATE_SETTINGS.add(HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN);
             PRIVATE_SETTINGS.add(HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT);
+            PRIVATE_SETTINGS.add(HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL);
         }
 
         /**
@@ -4697,7 +4709,8 @@ public final class Settings {
             VALIDATORS.put(HASH_BATTERY_LIGHT_REALLYFULL_COLOR, HASH_BATTERY_LIGHT_REALLYFULL_COLOR_VALIDATOR);
             VALIDATORS.put(HASH_DOUBLE_TAP_SLEEP_GESTURE, HASH_DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR);
             VALIDATORS.put(HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN, HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN_VALIDATOR);
-            VALIDATORS.put(HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT, HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT);
+            VALIDATORS.put(HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT, HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT_VALIDATOR);
+            VALIDATORS.put(HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL, HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL_VALIDATOR);
         }
 
         /**
