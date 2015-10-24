@@ -4355,6 +4355,15 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+        * Whether to show media art on lockscreen
+        * @hide
+        */
+       public static final String HASH_LOCKSCREEN_MEDIA_METADATA = "lockscreen_media_metadata";
+        /** @hide */
+        private static final Validator HASH_LOCKSCREEN_MEDIA_METADATA_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -4444,6 +4453,7 @@ public final class Settings {
             HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN,
             HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT,
             HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL,
+            HASH_LOCKSCREEN_MEDIA_METADATA,
         };
 
         /**
@@ -4588,6 +4598,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN);
             PRIVATE_SETTINGS.add(HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT);
             PRIVATE_SETTINGS.add(HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL);
+            PRIVATE_SETTINGS.add(HASH_LOCKSCREEN_MEDIA_METADATA);
         }
 
         /**
@@ -4711,6 +4722,7 @@ public final class Settings {
             VALIDATORS.put(HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN, HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN_VALIDATOR);
             VALIDATORS.put(HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT, HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT_VALIDATOR);
             VALIDATORS.put(HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL, HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL_VALIDATOR);
+            VALIDATORS.put(HASH_LOCKSCREEN_MEDIA_METADATA, HASH_LOCKSCREEN_MEDIA_METADATA_VALIDATOR);
         }
 
         /**
