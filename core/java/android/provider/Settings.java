@@ -4410,6 +4410,15 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * Volume rocker wake
+         * @hide
+         */
+        public static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
+         /** @hide */
+        private static final Validator HASH_VOLUME_ROCKER_WAKE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -4506,6 +4515,7 @@ public final class Settings {
             HASH_LOCKSCREEN_WEATHER_ENABLED,
             HASH_FINGERPRINT_SUCCESS_VIB,
             HASH_USE_BOTTOM_GESTURE_NAVIGATION,
+            HASH_VOLUME_ROCKER_WAKE,
         };
 
         /**
@@ -4656,6 +4666,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_LOCKSCREEN_WEATHER_ENABLED);
             PRIVATE_SETTINGS.add(HASH_FINGERPRINT_SUCCESS_VIB);
             PRIVATE_SETTINGS.add(HASH_USE_BOTTOM_GESTURE_NAVIGATION);
+            PRIVATE_SETTINGS.add(HASH_VOLUME_ROCKER_WAKE);
         }
 
         /**
@@ -4788,6 +4799,7 @@ public final class Settings {
             VALIDATORS.put(HASH_FINGERPRINT_SUCCESS_VIB, HASH_FINGERPRINT_SUCCESS_VIB_VALIDATOR);
             VALIDATORS.put(HASH_USE_BOTTOM_GESTURE_NAVIGATION,
                     HASH_USE_BOTTOM_GESTURE_NAVIGATION_VALIDATOR);
+            VALIDATORS.put(HASH_VOLUME_ROCKER_WAKE, HASHVOLUME_ROCKER_WAKE_VALIDATOR);
         }
 
         /**
