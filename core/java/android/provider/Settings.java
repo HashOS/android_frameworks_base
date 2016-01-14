@@ -4391,6 +4391,16 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * whether to enable or disable vibration on succesful fingerprint auth
+         *
+         * @hide
+         */
+        public static final String HASH_FINGERPRINT_SUCCESS_VIB = "fingerprint_success_vib";
+        /** @hide */
+        private static final Validator HASH_FINGERPRINT_SUCCESS_VIB_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -4485,6 +4495,7 @@ public final class Settings {
             HASH_LOCKSCREEN_MEDIA_METADATA,
             OMNIJAWS_WEATHER_ICON_PACK,
             HASH_LOCKSCREEN_WEATHER_ENABLED,
+            HASH_FINGERPRINT_SUCCESS_VIB,
         };
 
         /**
@@ -4633,6 +4644,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_LOCKSCREEN_MEDIA_METADATA);
             PRIVATE_SETTINGS.add(OMNIJAWS_WEATHER_ICON_PACK);
             PRIVATE_SETTINGS.add(HASH_LOCKSCREEN_WEATHER_ENABLED);
+            PRIVATE_SETTINGS.add(HASH_FINGERPRINT_SUCCESS_VIB);
         }
 
         /**
@@ -4762,6 +4774,7 @@ public final class Settings {
             VALIDATORS.put(OMNIJAWS_WEATHER_ICON_PACK, OMNIJAWS_WEATHER_ICON_PACK_VALIDATOR);
             VALIDATORS.put(HASH_LOCKSCREEN_WEATHER_ENABLED,
                     HASH_LOCKSCREEN_WEATHER_ENABLED_VALIDATOR);
+            VALIDATORS.put(HASH_FINGERPRINT_SUCCESS_VIB, HASH_FINGERPRINT_SUCCESS_VIB_VALIDATOR);
         }
 
         /**
