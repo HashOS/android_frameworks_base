@@ -4413,9 +4413,17 @@ public final class Settings {
          * Volume rocker wake
          * @hide
          */
-        public static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
+        public static final String HASH_VOLUME_ROCKER_WAKE = "volume_rocker_wake";
          /** @hide */
         private static final Validator HASH_VOLUME_ROCKER_WAKE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
+         * @hide
+         */
+        public static final String HASH_VOLUME_BUTTON_MUSIC_CONTROL = "volume_button_music_control";
+         /** @hide */
+        private static final Validator HASH_VOLUME_BUTTON_MUSIC_CONTROL_VALIDATOR =
                 BOOLEAN_VALIDATOR;
 
         /**
@@ -4516,6 +4524,7 @@ public final class Settings {
             HASH_FINGERPRINT_SUCCESS_VIB,
             HASH_USE_BOTTOM_GESTURE_NAVIGATION,
             HASH_VOLUME_ROCKER_WAKE,
+            HASH_VOLUME_BUTTON_MUSIC_CONTROL,
         };
 
         /**
@@ -4667,6 +4676,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_FINGERPRINT_SUCCESS_VIB);
             PRIVATE_SETTINGS.add(HASH_USE_BOTTOM_GESTURE_NAVIGATION);
             PRIVATE_SETTINGS.add(HASH_VOLUME_ROCKER_WAKE);
+            PRIVATE_SETTINGS.add(HASH_VOLUME_BUTTON_MUSIC_CONTROL);
         }
 
         /**
@@ -4799,7 +4809,8 @@ public final class Settings {
             VALIDATORS.put(HASH_FINGERPRINT_SUCCESS_VIB, HASH_FINGERPRINT_SUCCESS_VIB_VALIDATOR);
             VALIDATORS.put(HASH_USE_BOTTOM_GESTURE_NAVIGATION,
                     HASH_USE_BOTTOM_GESTURE_NAVIGATION_VALIDATOR);
-            VALIDATORS.put(HASH_VOLUME_ROCKER_WAKE, HASHVOLUME_ROCKER_WAKE_VALIDATOR);
+            VALIDATORS.put(HASH_VOLUME_ROCKER_WAKE, HASH_VOLUME_ROCKER_WAKE_VALIDATOR);
+            VALIDATORS.put(HASH_VOLUME_BUTTON_MUSIC_CONTROL, HASH_VOLUME_BUTTON_MUSIC_CONTROL_VALIDATOR);
         }
 
         /**
