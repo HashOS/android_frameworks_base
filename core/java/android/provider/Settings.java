@@ -4120,6 +4120,22 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * Number of qs columns on landscape orientation
+         * @hide
+         */
+        public static final String HASH_QS_LAYOUT_COLUMNS_LANDSCAPE = "qs_layout_columns_landscape";
+         /** @hide */
+        private static final Validator HASH_QS_LAYOUT_COLUMNS_LANDSCAPE_VALIDATOR =
+                ANY_STRING_VALIDATOR;
+         /**
+         * @hide
+         */
+        public static final String HASH_QS_LAYOUT_COLUMNS = "qs_layout_columns";
+         /** @hide */
+        private static final Validator HASH_QS_LAYOUT_COLUMNS_VALIDATOR =
+                ANY_STRING_VALIDATOR;
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -4187,6 +4203,8 @@ public final class Settings {
             DISPLAY_COLOR_MODE,
             HASH_ADVANCED_REBOOT,
             HASH_SYSTEM_PROXI_CHECK_ENABLED,
+            HASH_QS_LAYOUT_COLUMNS_LANDSCAPE,
+            HASH_QS_LAYOUT_COLUMNS,
         };
 
         /**
@@ -4303,6 +4321,8 @@ public final class Settings {
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE);
             PRIVATE_SETTINGS.add(HASH_ADVANCED_REBOOT);
             PRIVATE_SETTINGS.add(HASH_SYSTEM_PROXI_CHECK_ENABLED);
+            PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_COLUMNS_LANDSCAPE);
+            PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_COLUMNS);
         }
 
         /**
@@ -4394,6 +4414,9 @@ public final class Settings {
             VALIDATORS.put(HASH_ADVANCED_REBOOT, HASH_ADVANCED_REBOOT_VALIDATOR);
             VALIDATORS.put(HASH_SYSTEM_PROXI_CHECK_ENABLED,
                     HASH_SYSTEM_PROXI_CHECK_ENABLED_VALIDATOR);
+            VALIDATORS.put(HASH_QS_LAYOUT_COLUMNS_LANDSCAPE,
+                    HASH_QS_LAYOUT_COLUMNS_LANDSCAPE_VALIDATOR);
+            VALIDATORS.put(HASH_QS_LAYOUT_COLUMNS, HASH_QS_LAYOUT_COLUMNS_VALIDATOR);
         }
 
         /**
