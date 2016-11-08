@@ -4256,6 +4256,17 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * some devices have a extra hw button e.g. n3 on the back on the
+         * fingerprint sensor. allow mapping button to key
+         *
+         * @hide
+         */
+        public static final String HASH_BUTTON_EXTRA_KEY_MAPPING = "button_extra_mapping";
+         /** @hide */
+        private static final Validator HASH_BUTTON_EXTRA_KEY_MAPPING_VALIDATOR =
+                ANY_STRING_VALIDATOR;
+
+        /**
          * @hide
          */
         public static final String HASH_SCREENSHOT_SHUTTER_SOUND = "screenshot_shutter_sound";
@@ -4432,6 +4443,8 @@ public final class Settings {
             HASH_ADVANCED_REBOOT,
             HASH_POWERMENU_LOCKSCREEN,
             HASH_SYSTEM_PROXI_CHECK_ENABLED,
+            HASH_BUTTON_EXTRA_KEY_MAPPING,
+            HASH_HARDWARE_KEYS_DISABLE,
             HASH_QS_LAYOUT_COLUMNS_LANDSCAPE,
             HASH_QS_LAYOUT_COLUMNS,
             HASH_QS_TILE_TITLE_VISIBILITY,
@@ -4586,6 +4599,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_BUTTON_BACKLIGHT_TIMEOUT);
             PRIVATE_SETTINGS.add(HASH_BUTTON_BACKLIGHT_ON_TOUCH_ONLY);
             PRIVATE_SETTINGS.add(HASH_HARDWARE_KEYS_DISABLE);
+            PRIVATE_SETTINGS.add(HASH_BUTTON_EXTRA_KEY_MAPPING);
             PRIVATE_SETTINGS.add(HASH_SHOW_BATTERY_IMAGE);
             PRIVATE_SETTINGS.add(HASH_BATTERY_LIGHT_ENABLED);
             PRIVATE_SETTINGS.add(HASH_BATTERY_LIGHT_ALLOW_ON_DND);
@@ -4710,6 +4724,8 @@ public final class Settings {
             VALIDATORS.put(HASH_BUTTON_BACKLIGHT_ON_TOUCH_ONLY,
                     HASH_BUTTON_BACKLIGHT_ON_TOUCH_ONLY_VALIDATOR);
             VALIDATORS.put(HASH_HARDWARE_KEYS_DISABLE, HASH_HARDWARE_KEYS_DISABLE_VALIDATOR);
+            VALIDATORS.put(HASH_BUTTON_EXTRA_KEY_MAPPING,
+                    HASH_BUTTON_EXTRA_KEY_MAPPING_VALIDATOR);
             VALIDATORS.put(HASH_SHOW_BATTERY_IMAGE, HASH_SHOW_BATTERY_IMAGE_VALIDATOR);
             VALIDATORS.put(HASH_BATTERY_LIGHT_ENABLED, HASH_BATTERY_LIGHT_ENABLED_VALIDATOR);
             VALIDATORS.put(HASH_BATTERY_LIGHT_ALLOW_ON_DND, HASH_BATTERY_LIGHT_ALLOW_ON_DND_VALIDATOR);
