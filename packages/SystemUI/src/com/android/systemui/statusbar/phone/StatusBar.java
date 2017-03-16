@@ -636,6 +636,9 @@ public class StatusBar extends SystemUI implements DemoMode,
             mContext.getContentResolver().registerContentObserver(Settings.System.getUriFor(
                     Settings.System.HASH_NAVIGATION_BAR_SHOW),
                     false, this, UserHandle.USER_ALL);
+            mContext.getContentResolver().registerContentObserver(Settings.Secure.getUriFor(
+                    Settings.Secure.HASH_LOCK_QS_DISABLED),
+                    false, this, UserHandle.USER_ALL);
         }
 
         @Override
@@ -652,6 +655,9 @@ public class StatusBar extends SystemUI implements DemoMode,
                 if (showNavBarBool !=  mShowNavBar){
                     updateNavigationBar();
                 }
+            }
+            if (mNotificationPanel != null) {
+                mNotificationPanel.updateSettings();
             }
         }
     }
