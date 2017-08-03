@@ -77,4 +77,7 @@
   <!-- Proximity check on screen on default -->
   <java-symbol type="bool" name="config_proximityCheckOnWakeEnabledByDefault" />
 
+  <!-- Should proximity check also affect fingerprint reader-->
+  <java-symbol type="bool" name="config_proximityCheckOnFingerprintWake" />
+
 </resources>
