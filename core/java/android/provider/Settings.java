@@ -4316,6 +4316,16 @@ public final class Settings {
                 ANY_STRING_VALIDATOR;
 
         /**
+         *  Enable statusbar double tap gesture on to put device to sleep
+         * @hide
+         */
+        public static final String HASH_DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
+        /** @hide */
+        private static final Validator HASH_DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -4401,6 +4411,7 @@ public final class Settings {
             HASH_BATTERY_LIGHT_MEDIUM_COLOR,
             HASH_BATTERY_LIGHT_FULL_COLOR,
             HASH_BATTERY_LIGHT_REALLYFULL_COLOR,
+            HASH_DOUBLE_TAP_SLEEP_GESTURE,
         };
 
         /**
@@ -4541,6 +4552,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_BATTERY_LIGHT_MEDIUM_COLOR);
             PRIVATE_SETTINGS.add(HASH_BATTERY_LIGHT_FULL_COLOR);
             PRIVATE_SETTINGS.add(HASH_BATTERY_LIGHT_REALLYFULL_COLOR);
+            PRIVATE_SETTINGS.add(HASH_DOUBLE_TAP_SLEEP_GESTURE);
         }
 
         /**
@@ -4660,6 +4672,7 @@ public final class Settings {
             VALIDATORS.put(HASH_BATTERY_LIGHT_MEDIUM_COLOR, HASH_BATTERY_LIGHT_MEDIUM_COLOR_VALIDATOR);
             VALIDATORS.put(HASH_BATTERY_LIGHT_FULL_COLOR, HASH_BATTERY_LIGHT_FULL_COLOR_VALIDATOR);
             VALIDATORS.put(HASH_BATTERY_LIGHT_REALLYFULL_COLOR, HASH_BATTERY_LIGHT_REALLYFULL_COLOR_VALIDATOR);
+            VALIDATORS.put(HASH_DOUBLE_TAP_SLEEP_GESTURE, HASH_DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR);
         }
 
         /**
