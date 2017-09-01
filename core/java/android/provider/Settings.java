@@ -4324,6 +4324,15 @@ public final class Settings {
         private static final Validator HASH_DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR =
                 BOOLEAN_VALIDATOR;
 
+        /**
+         * Double tap on lockscreen to sleep
+         * @hide
+         */
+        public static final String HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN =
+                "double_tap_sleep_lockscreen";
+        /** @hide */
+        private static final Validator HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN_VALIDATOR =
+                BOOLEAN_VALIDATOR;
 
         /**
          * IMPORTANT: If you add a new public settings you also have to add it to
@@ -4412,6 +4421,7 @@ public final class Settings {
             HASH_BATTERY_LIGHT_FULL_COLOR,
             HASH_BATTERY_LIGHT_REALLYFULL_COLOR,
             HASH_DOUBLE_TAP_SLEEP_GESTURE,
+            HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN,
         };
 
         /**
@@ -4553,6 +4563,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_BATTERY_LIGHT_FULL_COLOR);
             PRIVATE_SETTINGS.add(HASH_BATTERY_LIGHT_REALLYFULL_COLOR);
             PRIVATE_SETTINGS.add(HASH_DOUBLE_TAP_SLEEP_GESTURE);
+            PRIVATE_SETTINGS.add(HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN);
         }
 
         /**
@@ -4673,6 +4684,7 @@ public final class Settings {
             VALIDATORS.put(HASH_BATTERY_LIGHT_FULL_COLOR, HASH_BATTERY_LIGHT_FULL_COLOR_VALIDATOR);
             VALIDATORS.put(HASH_BATTERY_LIGHT_REALLYFULL_COLOR, HASH_BATTERY_LIGHT_REALLYFULL_COLOR_VALIDATOR);
             VALIDATORS.put(HASH_DOUBLE_TAP_SLEEP_GESTURE, HASH_DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR);
+            VALIDATORS.put(HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN, HASH_DOUBLE_TAP_SLEEP_LOCKSCREEN_VALIDATOR);
         }
 
         /**
