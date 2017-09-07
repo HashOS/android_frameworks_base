@@ -4435,6 +4435,14 @@ public final class Settings {
         private static final Validator HASH_ENABLE_SUGGESTIONS_VALIDATOR =
                 BOOLEAN_VALIDATOR;
 
+        /**
+         * Disable dashboard conditions in settings
+         * @hide
+         */
+        public static final String HASH_ENABLE_CONDITIONS = "enable_conditions";
+         /** @hide */
+        private static final Validator HASH_ENABLE_CONDITIONS_VALIDATOR =
+                BOOLEAN_VALIDATOR;
 
         /**
          * IMPORTANT: If you add a new public settings you also have to add it to
@@ -4561,6 +4569,7 @@ public final class Settings {
             HASH_VOLUME_ROCKER_WAKE,
             HASH_VOLUME_BUTTON_MUSIC_CONTROL,
             HASH_ENABLE_SUGGESTIONS,
+            HASH_ENABLE_CONDITIONS,
         };
 
         /**
@@ -4715,6 +4724,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_VOLUME_BUTTON_MUSIC_CONTROL);
             PRIVATE_SETTINGS.add(SYSTEM_THEME_STYLE);
             PRIVATE_SETTINGS.add(HASH_ENABLE_SUGGESTIONS);
+            PRIVATE_SETTINGS.add(HASH_ENABLE_CONDITIONS);
         }
 
         /**
@@ -4850,6 +4860,7 @@ public final class Settings {
             VALIDATORS.put(HASH_VOLUME_ROCKER_WAKE, HASH_VOLUME_ROCKER_WAKE_VALIDATOR);
             VALIDATORS.put(HASH_VOLUME_BUTTON_MUSIC_CONTROL, HASH_VOLUME_BUTTON_MUSIC_CONTROL_VALIDATOR);
             VALIDATORS.put(HASH_ENABLE_SUGGESTIONS, HASH_ENABLE_SUGGESTIONS_VALIDATOR);
+            VALIDATORS.put(HASH_ENABLE_CONDITIONS, HASH_ENABLE_CONDITIONS_VALIDATOR);
         }
 
         /**
