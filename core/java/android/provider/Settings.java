@@ -4136,6 +4136,15 @@ public final class Settings {
                 ANY_STRING_VALIDATOR;
 
         /**
+         * Whether to display qs tile titles in the qs panel
+         * @hide
+         */
+        public static final String HASH_QS_TILE_TITLE_VISIBILITY = "qs_tile_title_visibility";
+         /** @hide */
+        private static final Validator HASH_QS_TILE_TITLE_VISIBILITY_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -4205,6 +4214,7 @@ public final class Settings {
             HASH_SYSTEM_PROXI_CHECK_ENABLED,
             HASH_QS_LAYOUT_COLUMNS_LANDSCAPE,
             HASH_QS_LAYOUT_COLUMNS,
+            HASH_QS_TILE_TITLE_VISIBILITY,
         };
 
         /**
@@ -4323,6 +4333,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_SYSTEM_PROXI_CHECK_ENABLED);
             PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_COLUMNS_LANDSCAPE);
             PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_COLUMNS);
+            PRIVATE_SETTINGS.add(HASH_QS_TILE_TITLE_VISIBILITY);
         }
 
         /**
@@ -4417,6 +4428,7 @@ public final class Settings {
             VALIDATORS.put(HASH_QS_LAYOUT_COLUMNS_LANDSCAPE,
                     HASH_QS_LAYOUT_COLUMNS_LANDSCAPE_VALIDATOR);
             VALIDATORS.put(HASH_QS_LAYOUT_COLUMNS, HASH_QS_LAYOUT_COLUMNS_VALIDATOR);
+            VALIDATORS.put(HASH_QS_TILE_TITLE_VISIBILITY, HASH_QS_TILE_TITLE_VISIBILITY_VALIDATOR);
         }
 
         /**
