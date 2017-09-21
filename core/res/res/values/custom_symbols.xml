@@ -80,4 +80,8 @@
   <!-- Should proximity check also affect fingerprint reader-->
   <java-symbol type="bool" name="config_proximityCheckOnFingerprintWake" />
 
+  <!-- HW keys binding -->
+  <java-symbol type="anim" name="custom_app_in" />
+  <java-symbol type="anim" name="custom_app_out" />
+
 </resources>
