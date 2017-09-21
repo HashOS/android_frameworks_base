@@ -4126,14 +4126,14 @@ public final class Settings {
         public static final String HASH_QS_LAYOUT_COLUMNS_LANDSCAPE = "qs_layout_columns_landscape";
          /** @hide */
         private static final Validator HASH_QS_LAYOUT_COLUMNS_LANDSCAPE_VALIDATOR =
-                ANY_STRING_VALIDATOR;
+                ANY_INTEGER_VALIDATOR;
          /**
          * @hide
          */
         public static final String HASH_QS_LAYOUT_COLUMNS = "qs_layout_columns";
          /** @hide */
         private static final Validator HASH_QS_LAYOUT_COLUMNS_VALIDATOR =
-                ANY_STRING_VALIDATOR;
+                ANY_INTEGER_VALIDATOR;
 
         /**
          * Whether to display qs tile titles in the qs panel
@@ -4143,6 +4143,14 @@ public final class Settings {
          /** @hide */
         private static final Validator HASH_QS_TILE_TITLE_VISIBILITY_VALIDATOR =
                 BOOLEAN_VALIDATOR;
+
+        /**
+         * @hide
+         */
+        public static final String HASH_QS_LAYOUT_ROWS = "qs_layout_rows";
+         /** @hide */
+        private static final Validator HASH_QS_LAYOUT_ROWS_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
 
         /**
          * IMPORTANT: If you add a new public settings you also have to add it to
@@ -4215,6 +4223,7 @@ public final class Settings {
             HASH_QS_LAYOUT_COLUMNS_LANDSCAPE,
             HASH_QS_LAYOUT_COLUMNS,
             HASH_QS_TILE_TITLE_VISIBILITY,
+            HASH_QS_LAYOUT_ROWS,
         };
 
         /**
@@ -4334,6 +4343,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_COLUMNS_LANDSCAPE);
             PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_COLUMNS);
             PRIVATE_SETTINGS.add(HASH_QS_TILE_TITLE_VISIBILITY);
+            PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_ROWS);
         }
 
         /**
@@ -4429,6 +4439,7 @@ public final class Settings {
                     HASH_QS_LAYOUT_COLUMNS_LANDSCAPE_VALIDATOR);
             VALIDATORS.put(HASH_QS_LAYOUT_COLUMNS, HASH_QS_LAYOUT_COLUMNS_VALIDATOR);
             VALIDATORS.put(HASH_QS_TILE_TITLE_VISIBILITY, HASH_QS_TILE_TITLE_VISIBILITY_VALIDATOR);
+            VALIDATORS.put(HASH_QS_LAYOUT_ROWS, HASH_QS_LAYOUT_ROWS_VALIDATOR);
         }
 
         /**
