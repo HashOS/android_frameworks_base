@@ -67,6 +67,10 @@ interface IPowerManager
     // sets the attention light (used by phone app only)
     void setAttentionLight(boolean on, int color);
 
+    // temporarily overrides the button brightness settings to allow the user to
+    // see the effect of a settings change without applying it immediately
+    void setTemporaryButtonBrightnessSettingOverride(int brightness);
+
     // controls whether PowerManager should doze after the screen turns off or not
     void setDozeAfterScreenOff(boolean on);
 }

@@ -4155,6 +4155,62 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * Custom button brightness value for manual mode
+         *
+         * @hide
+         */
+        public static final String HASH_CUSTOM_BUTTON_BRIGHTNESS = "custom_button_brightness";
+         /** @hide */
+        private static final Validator HASH_CUSTOM_BUTTON_BRIGHTNESS_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+         /**
+         * use same value for buttons as for screen (manual and auto mode)
+         *
+         * @hide
+         */
+        public static final String HASH_CUSTOM_BUTTON_USE_SCREEN_BRIGHTNESS = "custom_button_use_screen_brightness";
+         /** @hide */
+        private static final Validator HASH_CUSTOM_BUTTON_USE_SCREEN_BRIGHTNESS_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+         /**
+         * disable all button brightness (manual and auto mode)
+         *
+         * @hide
+         */
+        public static final String HASH_BUTTON_BACKLIGHT_ENABLE = "button_backlight_enable";
+         /** @hide */
+        private static final Validator HASH_BUTTON_BACKLIGHT_ENABLE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+         /**
+         * Timeout value for button lights. 0 = disabled
+         * @hide
+         */
+        public static final String HASH_BUTTON_BACKLIGHT_TIMEOUT = "button_backlight_timeout";
+         /** @hide */
+        private static final Validator HASH_BUTTON_BACKLIGHT_TIMEOUT_VALIDATOR =
+               ANY_STRING_VALIDATOR;
+
+         /**
+         * @hide
+         */
+        public static final String HASH_BUTTON_BACKLIGHT_ON_TOUCH_ONLY = "button_backlight_on_touch_only";
+         /** @hide */
+        private static final Validator HASH_BUTTON_BACKLIGHT_ON_TOUCH_ONLY_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
+         * Disable hw buttons - actions, brightness, haptic feedback, overflow menu
+         * @hide
+         */
+        public static final String HASH_HARDWARE_KEYS_DISABLE = "hardware_keys_disable";
+         /** @hide */
+        private static final Validator HASH_HARDWARE_KEYS_DISABLE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * @hide
          */
         public static final String HASH_SCREENSHOT_SHUTTER_SOUND = "screenshot_shutter_sound";
@@ -4360,6 +4416,12 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_ROWS);
             PRIVATE_SETTINGS.add(HASH_NAVIGATION_BAR_SHOW);
             PRIVATE_SETTINGS.add(HASH_SCREENSHOT_SHUTTER_SOUND);
+            PRIVATE_SETTINGS.add(HASH_CUSTOM_BUTTON_BRIGHTNESS);
+            PRIVATE_SETTINGS.add(HASH_CUSTOM_BUTTON_USE_SCREEN_BRIGHTNESS);
+            PRIVATE_SETTINGS.add(HASH_BUTTON_BACKLIGHT_ENABLE);
+            PRIVATE_SETTINGS.add(HASH_BUTTON_BACKLIGHT_TIMEOUT);
+            PRIVATE_SETTINGS.add(HASH_BUTTON_BACKLIGHT_ON_TOUCH_ONLY);
+            PRIVATE_SETTINGS.add(HASH_HARDWARE_KEYS_DISABLE);
         }
 
         /**
@@ -4460,6 +4522,14 @@ public final class Settings {
             VALIDATORS.put(HASH_NAVIGATION_BAR_SHOW, HASH_NAVIGATION_BAR_SHOW_VALIDATOR);
             VALIDATORS.put(HASH_SCREENSHOT_SHUTTER_SOUND,
                     HASH_SCREENSHOT_SHUTTER_SOUND_VALIDATOR);
+            VALIDATORS.put(HASH_CUSTOM_BUTTON_BRIGHTNESS, HASH_CUSTOM_BUTTON_BRIGHTNESS_VALIDATOR);
+            VALIDATORS.put(HASH_CUSTOM_BUTTON_USE_SCREEN_BRIGHTNESS,
+                    HASH_CUSTOM_BUTTON_USE_SCREEN_BRIGHTNESS_VALIDATOR);
+            VALIDATORS.put(HASH_BUTTON_BACKLIGHT_ENABLE, HASH_BUTTON_BACKLIGHT_ENABLE_VALIDATOR);
+            VALIDATORS.put(HASH_BUTTON_BACKLIGHT_TIMEOUT, HASH_BUTTON_BACKLIGHT_TIMEOUT_VALIDATOR);
+            VALIDATORS.put(HASH_BUTTON_BACKLIGHT_ON_TOUCH_ONLY,
+                    HASH_BUTTON_BACKLIGHT_ON_TOUCH_ONLY_VALIDATOR);
+            VALIDATORS.put(HASH_HARDWARE_KEYS_DISABLE, HASH_HARDWARE_KEYS_DISABLE_VALIDATOR);
         }
 
         /**
