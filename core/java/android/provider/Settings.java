@@ -4219,6 +4219,14 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * @hide
+         */
+        public static final String HASH_SHOW_BATTERY_IMAGE = "status_bar_show_battery_image";
+         /** @hide */
+        private static final Validator HASH_SHOW_BATTERY_IMAGE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -4293,6 +4301,7 @@ public final class Settings {
             HASH_QS_LAYOUT_ROWS,
             HASH_NAVIGATION_BAR_SHOW,
             HASH_SCREENSHOT_SHUTTER_SOUND,
+            HASH_SHOW_BATTERY_IMAGE,
         };
 
         /**
@@ -4422,6 +4431,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_BUTTON_BACKLIGHT_TIMEOUT);
             PRIVATE_SETTINGS.add(HASH_BUTTON_BACKLIGHT_ON_TOUCH_ONLY);
             PRIVATE_SETTINGS.add(HASH_HARDWARE_KEYS_DISABLE);
+            PRIVATE_SETTINGS.add(HASH_SHOW_BATTERY_IMAGE);
         }
 
         /**
@@ -4530,6 +4540,7 @@ public final class Settings {
             VALIDATORS.put(HASH_BUTTON_BACKLIGHT_ON_TOUCH_ONLY,
                     HASH_BUTTON_BACKLIGHT_ON_TOUCH_ONLY_VALIDATOR);
             VALIDATORS.put(HASH_HARDWARE_KEYS_DISABLE, HASH_HARDWARE_KEYS_DISABLE_VALIDATOR);
+            VALIDATORS.put(HASH_SHOW_BATTERY_IMAGE, HASH_SHOW_BATTERY_IMAGE_VALIDATOR);
         }
 
         /**
