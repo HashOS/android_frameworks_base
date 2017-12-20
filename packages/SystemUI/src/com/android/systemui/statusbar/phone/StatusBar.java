@@ -652,6 +652,9 @@ public class StatusBar extends SystemUI implements DemoMode,
             mContext.getContentResolver().registerContentObserver(Settings.System.getUriFor(
                     Settings.System.HASH_LOCKSCREEN_MEDIA_METADATA),
                     false, this, UserHandle.USER_ALL);
+            mContext.getContentResolver().registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.SYSTEM_THEME_STYLE),
+                    false, this, UserHandle.USER_ALL);
         }
 
         @Override
@@ -676,6 +679,7 @@ public class StatusBar extends SystemUI implements DemoMode,
                 mStatusBarWindow.updateSettings();
             }
             setLockscreenMediaMetadata();
+            updateTheme();
         }
     }
     private HashSettingsObserver mHashSettingsObserver;
@@ -2142,6 +2146,20 @@ public class StatusBar extends SystemUI implements DemoMode,
             e.printStackTrace();
         }
         return themeInfo != null && themeInfo.isEnabled();
+    }
+
+    public void unloadStockDarkTheme() {
+        OverlayInfo themeInfo = null;
+        try {
+            themeInfo = mOverlayManager.getOverlayInfo("com.android.systemui.theme.dark",
+                    mCurrentUserId);
+            if (themeInfo != null && themeInfo.isEnabled()) {
+                mOverlayManager.setEnabled("com.android.systemui.theme.dark",
+                        false /*disable*/, mCurrentUserId);
+            }
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 
     @Nullable
@@ -3937,16 +3955,26 @@ public class StatusBar extends SystemUI implements DemoMode,
     protected void updateTheme() {
         final boolean inflated = mStackScroller != null;
 
-        // The system wallpaper defines if QS should be light or dark.
-        WallpaperColors systemColors = mColorExtractor
-                .getWallpaperColors(WallpaperManager.FLAG_SYSTEM);
-        final boolean useDarkTheme = systemColors != null
-                && (systemColors.getColorHints() & WallpaperColors.HINT_SUPPORTS_DARK_THEME) != 0;
+        int userThemeSetting = Settings.System.getIntForUser(mContext.getContentResolver(),
+                Settings.System.SYSTEM_THEME_STYLE, 0, mCurrentUserId);
+        boolean useDarkTheme = false;
+        if (userThemeSetting == 0) {
+            // The system wallpaper defines if QS should be light or dark.
+            WallpaperColors systemColors = mColorExtractor
+                    .getWallpaperColors(WallpaperManager.FLAG_SYSTEM);
+            useDarkTheme = systemColors != null
+                    && (systemColors.getColorHints() & WallpaperColors.HINT_SUPPORTS_DARK_THEME) != 0;
+        } else {
+            useDarkTheme = userThemeSetting == 2;
+        }
         if (isUsingDarkTheme() != useDarkTheme) {
             mUiOffloadThread.submit(() -> {
                 try {
                     mOverlayManager.setEnabled("com.android.systemui.theme.dark",
                             useDarkTheme, mLockscreenUserManager.getCurrentUserId());
+                    if (useDarkTheme) {
+                       unloadStockDarkTheme();
+                    }
                 } catch (RemoteException e) {
                     Log.w(TAG, "Can't change theme", e);
                 }
