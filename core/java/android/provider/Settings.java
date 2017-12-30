@@ -4112,6 +4112,15 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * Whether to display the power menu dialog while on the lockscreen
+         * @hide
+         */
+        public static final String HASH_POWERMENU_LOCKSCREEN = "powermenu_lockscreen";
+         /** @hide */
+        private static final Validator HASH_POWERMENU_LOCKSCREEN_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * @hide
          */
         public static final String HASH_SYSTEM_PROXI_CHECK_ENABLED = "system_proxi_check_enabled";
@@ -4227,6 +4236,7 @@ public final class Settings {
             HAPTIC_FEEDBACK_INTENSITY,
             DISPLAY_COLOR_MODE,
             HASH_ADVANCED_REBOOT,
+            HASH_POWERMENU_LOCKSCREEN,
             HASH_SYSTEM_PROXI_CHECK_ENABLED,
             HASH_QS_LAYOUT_COLUMNS_LANDSCAPE,
             HASH_QS_LAYOUT_COLUMNS,
@@ -4348,6 +4358,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(SHOW_BATTERY_PERCENT);
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE);
             PRIVATE_SETTINGS.add(HASH_ADVANCED_REBOOT);
+            PRIVATE_SETTINGS.add(HASH_POWERMENU_LOCKSCREEN);
             PRIVATE_SETTINGS.add(HASH_SYSTEM_PROXI_CHECK_ENABLED);
             PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_COLUMNS_LANDSCAPE);
             PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_COLUMNS);
@@ -4443,6 +4454,7 @@ public final class Settings {
             VALIDATORS.put(WIFI_STATIC_DNS2, WIFI_STATIC_DNS2_VALIDATOR);
             VALIDATORS.put(SHOW_BATTERY_PERCENT, SHOW_BATTERY_PERCENT_VALIDATOR);
             VALIDATORS.put(HASH_ADVANCED_REBOOT, HASH_ADVANCED_REBOOT_VALIDATOR);
+            VALIDATORS.put(HASH_POWERMENU_LOCKSCREEN, HASH_POWERMENU_LOCKSCREEN_VALIDATOR);
             VALIDATORS.put(HASH_SYSTEM_PROXI_CHECK_ENABLED,
                     HASH_SYSTEM_PROXI_CHECK_ENABLED_VALIDATOR);
             VALIDATORS.put(HASH_QS_LAYOUT_COLUMNS_LANDSCAPE,
