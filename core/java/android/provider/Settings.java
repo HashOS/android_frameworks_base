@@ -8269,6 +8269,13 @@ public final class Settings {
         public static final String HASH_LOCK_QS_DISABLED = "lockscreen_qs_disabled";
 
         /**
+         * Enable face auto unlock on secure lock screens
+         *
+         * @hide
+         */
+        public static final String HASH_FACE_AUTO_UNLOCK = "face_auto_unlock";
+
+        /**
          * This are the settings to be backed up.
          *
          * NOTE: Settings are backed up and restored in the order they appear
