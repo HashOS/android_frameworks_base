@@ -23,7 +23,7 @@
 
     <!-- The default tiles to display in QuickSettings -->
     <string name="quick_settings_tiles_extra" translatable="false">
-        aod,caffeine,adb_network,weather,heads_up,keydisable
+        aod,caffeine,adb_network,weather,heads_up,keydisable,navbardisable
     </string>
 
 </resources>

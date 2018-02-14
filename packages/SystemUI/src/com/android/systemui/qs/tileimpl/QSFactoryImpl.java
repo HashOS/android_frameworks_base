@@ -40,6 +40,7 @@ import com.android.systemui.qs.tiles.HotspotTile;
 import com.android.systemui.qs.tiles.IntentTile;
 import com.android.systemui.qs.tiles.KeyDisableTile;
 import com.android.systemui.qs.tiles.LocationTile;
+import com.android.systemui.qs.tiles.NavbarDisableTile;
 import com.android.systemui.qs.tiles.NfcTile;
 import com.android.systemui.qs.tiles.NightDisplayTile;
 import com.android.systemui.qs.tiles.RotationLockTile;
@@ -117,6 +118,8 @@ public class QSFactoryImpl implements QSFactory {
                 return new HeadsUpTile(mHost);
             case "keydisable":
                 return new KeyDisableTile(mHost);
+            case "navbardisable":
+                return new NavbarDisableTile(mHost);
         }
 
         // Intent tiles.
