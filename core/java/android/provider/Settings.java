@@ -4147,6 +4147,15 @@ public final class Settings {
                 ANY_INTEGER_VALIDATOR;
 
         /**
+         * Whether to change the transparency of the qs panel
+         * @hide
+         */
+        public static final String HASH_QS_PANEL_BG_ALPHA = "qs_panel_bg_alpha";
+         /** @hide */
+        private static final Validator HASH_QS_PANEL_BG_ALPHA_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+        /**
          * @hide
          */
         public static final String HASH_NAVIGATION_BAR_SHOW = "navigation_bar_show";
@@ -4299,6 +4308,7 @@ public final class Settings {
             HASH_QS_LAYOUT_COLUMNS,
             HASH_QS_TILE_TITLE_VISIBILITY,
             HASH_QS_LAYOUT_ROWS,
+            HASH_QS_PANEL_BG_ALPHA,
             HASH_NAVIGATION_BAR_SHOW,
             HASH_SCREENSHOT_SHUTTER_SOUND,
             HASH_SHOW_BATTERY_IMAGE,
@@ -4423,6 +4433,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_COLUMNS);
             PRIVATE_SETTINGS.add(HASH_QS_TILE_TITLE_VISIBILITY);
             PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_ROWS);
+            PRIVATE_SETTINGS.add(HASH_QS_PANEL_BG_ALPHA);
             PRIVATE_SETTINGS.add(HASH_NAVIGATION_BAR_SHOW);
             PRIVATE_SETTINGS.add(HASH_SCREENSHOT_SHUTTER_SOUND);
             PRIVATE_SETTINGS.add(HASH_CUSTOM_BUTTON_BRIGHTNESS);
@@ -4529,6 +4540,7 @@ public final class Settings {
             VALIDATORS.put(HASH_QS_LAYOUT_COLUMNS, HASH_QS_LAYOUT_COLUMNS_VALIDATOR);
             VALIDATORS.put(HASH_QS_TILE_TITLE_VISIBILITY, HASH_QS_TILE_TITLE_VISIBILITY_VALIDATOR);
             VALIDATORS.put(HASH_QS_LAYOUT_ROWS, HASH_QS_LAYOUT_ROWS_VALIDATOR);
+            VALIDATORS.put(HASH_QS_PANEL_BG_ALPHA, HASH_QS_PANEL_BG_ALPHA_VALIDATOR);
             VALIDATORS.put(HASH_NAVIGATION_BAR_SHOW, HASH_NAVIGATION_BAR_SHOW_VALIDATOR);
             VALIDATORS.put(HASH_SCREENSHOT_SHUTTER_SOUND,
                     HASH_SCREENSHOT_SHUTTER_SOUND_VALIDATOR);
