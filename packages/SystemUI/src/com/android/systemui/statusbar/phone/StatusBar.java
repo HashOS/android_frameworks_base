@@ -2168,6 +2168,10 @@ public class StatusBar extends SystemUI implements DemoMode,
         return ThemeAccentUtils.isUsingExtendedTheme(mOverlayManager, mLockscreenUserManager.getCurrentUserId());
     }
 
+    public boolean isUsingChocolateTheme() {
+        return ThemeAccentUtils.isUsingChocolateTheme(mOverlayManager, mLockscreenUserManager.getCurrentUserId());
+    }
+
     // Unloads the stock dark theme
     public void unloadStockDarkTheme() {
         ThemeAccentUtils.unloadStockDarkTheme(mOverlayManager, mLockscreenUserManager.getCurrentUserId());
@@ -3975,6 +3979,7 @@ public class StatusBar extends SystemUI implements DemoMode,
      */
     protected void updateTheme() {
         final boolean inflated = mStackScroller != null;
+        boolean useChocolateTheme = false;
         boolean useExtendedTheme = false;
         boolean useBlackTheme = false;
         boolean useDarkTheme = false;
@@ -3988,6 +3993,7 @@ public class StatusBar extends SystemUI implements DemoMode,
             useDarkTheme = mCurrentTheme == 2;
             useBlackTheme = mCurrentTheme == 3;
             useExtendedTheme = mCurrentTheme == 4;
+            useChocolateTheme = mCurrentTheme == 5;
         }
         if (isUsingDarkTheme() != useDarkTheme) {
             // Check for black and white accent so we don't end up
@@ -4006,6 +4012,13 @@ public class StatusBar extends SystemUI implements DemoMode,
             // with white on white or black on black
             unfuckBlackWhiteAccent();
             ThemeAccentUtils.setLightExtendedTheme(mOverlayManager, mLockscreenUserManager.getCurrentUserId(), useExtendedTheme);
+        }
+
+        if (isUsingChocolateTheme() != useChocolateTheme) {
+            // Check for black and white accent so we don't end up
+            // with white on white or black on black
+            unfuckBlackWhiteAccent();
+            ThemeAccentUtils.setLightChocolateTheme(mOverlayManager, mLockscreenUserManager.getCurrentUserId(), useChocolateTheme);
         }
 
         // Lock wallpaper defines the color of the majority of the views, hence we'll use it
