@@ -4401,6 +4401,15 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * @hide
+         */
+        public static final String HASH_USE_BOTTOM_GESTURE_NAVIGATION =
+                "use_bottom_gesture_navigation";
+         /** @hide */
+        private static final Validator HASH_USE_BOTTOM_GESTURE_NAVIGATION_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -4496,6 +4505,7 @@ public final class Settings {
             OMNIJAWS_WEATHER_ICON_PACK,
             HASH_LOCKSCREEN_WEATHER_ENABLED,
             HASH_FINGERPRINT_SUCCESS_VIB,
+            HASH_USE_BOTTOM_GESTURE_NAVIGATION,
         };
 
         /**
@@ -4645,6 +4655,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(OMNIJAWS_WEATHER_ICON_PACK);
             PRIVATE_SETTINGS.add(HASH_LOCKSCREEN_WEATHER_ENABLED);
             PRIVATE_SETTINGS.add(HASH_FINGERPRINT_SUCCESS_VIB);
+            PRIVATE_SETTINGS.add(HASH_USE_BOTTOM_GESTURE_NAVIGATION);
         }
 
         /**
@@ -4775,6 +4786,8 @@ public final class Settings {
             VALIDATORS.put(HASH_LOCKSCREEN_WEATHER_ENABLED,
                     HASH_LOCKSCREEN_WEATHER_ENABLED_VALIDATOR);
             VALIDATORS.put(HASH_FINGERPRINT_SUCCESS_VIB, HASH_FINGERPRINT_SUCCESS_VIB_VALIDATOR);
+            VALIDATORS.put(HASH_USE_BOTTOM_GESTURE_NAVIGATION,
+                    HASH_USE_BOTTOM_GESTURE_NAVIGATION_VALIDATOR);
         }
 
         /**
