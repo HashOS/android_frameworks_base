@@ -4112,6 +4112,14 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * @hide
+         */
+        public static final String HASH_SYSTEM_PROXI_CHECK_ENABLED = "system_proxi_check_enabled";
+         /** @hide */
+        private static final Validator HASH_SYSTEM_PROXI_CHECK_ENABLED_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -4178,6 +4186,7 @@ public final class Settings {
             HAPTIC_FEEDBACK_INTENSITY,
             DISPLAY_COLOR_MODE,
             HASH_ADVANCED_REBOOT,
+            HASH_SYSTEM_PROXI_CHECK_ENABLED,
         };
 
         /**
@@ -4293,6 +4302,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(SHOW_BATTERY_PERCENT);
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE);
             PRIVATE_SETTINGS.add(HASH_ADVANCED_REBOOT);
+            PRIVATE_SETTINGS.add(HASH_SYSTEM_PROXI_CHECK_ENABLED);
         }
 
         /**
@@ -4382,6 +4392,8 @@ public final class Settings {
             VALIDATORS.put(WIFI_STATIC_DNS2, WIFI_STATIC_DNS2_VALIDATOR);
             VALIDATORS.put(SHOW_BATTERY_PERCENT, SHOW_BATTERY_PERCENT_VALIDATOR);
             VALIDATORS.put(HASH_ADVANCED_REBOOT, HASH_ADVANCED_REBOOT_VALIDATOR);
+            VALIDATORS.put(HASH_SYSTEM_PROXI_CHECK_ENABLED,
+                    HASH_SYSTEM_PROXI_CHECK_ENABLED_VALIDATOR);
         }
 
         /**
