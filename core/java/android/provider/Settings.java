@@ -4153,6 +4153,14 @@ public final class Settings {
                 ANY_INTEGER_VALIDATOR;
 
         /**
+         * @hide
+         */
+        public static final String HASH_NAVIGATION_BAR_SHOW = "navigation_bar_show";
+         /** @hide */
+        private static final Validator HASH_NAVIGATION_BAR_SHOW_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -4224,6 +4232,7 @@ public final class Settings {
             HASH_QS_LAYOUT_COLUMNS,
             HASH_QS_TILE_TITLE_VISIBILITY,
             HASH_QS_LAYOUT_ROWS,
+            HASH_NAVIGATION_BAR_SHOW,
         };
 
         /**
@@ -4344,6 +4353,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_COLUMNS);
             PRIVATE_SETTINGS.add(HASH_QS_TILE_TITLE_VISIBILITY);
             PRIVATE_SETTINGS.add(HASH_QS_LAYOUT_ROWS);
+            PRIVATE_SETTINGS.add(HASH_NAVIGATION_BAR_SHOW);
         }
 
         /**
@@ -4440,6 +4450,7 @@ public final class Settings {
             VALIDATORS.put(HASH_QS_LAYOUT_COLUMNS, HASH_QS_LAYOUT_COLUMNS_VALIDATOR);
             VALIDATORS.put(HASH_QS_TILE_TITLE_VISIBILITY, HASH_QS_TILE_TITLE_VISIBILITY_VALIDATOR);
             VALIDATORS.put(HASH_QS_LAYOUT_ROWS, HASH_QS_LAYOUT_ROWS_VALIDATOR);
+            VALIDATORS.put(HASH_NAVIGATION_BAR_SHOW, HASH_NAVIGATION_BAR_SHOW_VALIDATOR);
         }
 
         /**
