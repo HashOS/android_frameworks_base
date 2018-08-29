@@ -4427,6 +4427,16 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * Disable dashboard suggestions in settings
+         * @hide
+         */
+        public static final String HASH_ENABLE_SUGGESTIONS = "enable_suggestions";
+         /** @hide */
+        private static final Validator HASH_ENABLE_SUGGESTIONS_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -4550,6 +4560,7 @@ public final class Settings {
             HASH_USE_BOTTOM_GESTURE_NAVIGATION,
             HASH_VOLUME_ROCKER_WAKE,
             HASH_VOLUME_BUTTON_MUSIC_CONTROL,
+            HASH_ENABLE_SUGGESTIONS,
         };
 
         /**
@@ -4703,6 +4714,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_VOLUME_ROCKER_WAKE);
             PRIVATE_SETTINGS.add(HASH_VOLUME_BUTTON_MUSIC_CONTROL);
             PRIVATE_SETTINGS.add(SYSTEM_THEME_STYLE);
+            PRIVATE_SETTINGS.add(HASH_ENABLE_SUGGESTIONS);
         }
 
         /**
@@ -4837,6 +4849,7 @@ public final class Settings {
                     HASH_USE_BOTTOM_GESTURE_NAVIGATION_VALIDATOR);
             VALIDATORS.put(HASH_VOLUME_ROCKER_WAKE, HASH_VOLUME_ROCKER_WAKE_VALIDATOR);
             VALIDATORS.put(HASH_VOLUME_BUTTON_MUSIC_CONTROL, HASH_VOLUME_BUTTON_MUSIC_CONTROL_VALIDATOR);
+            VALIDATORS.put(HASH_ENABLE_SUGGESTIONS, HASH_ENABLE_SUGGESTIONS_VALIDATOR);
         }
 
         /**
