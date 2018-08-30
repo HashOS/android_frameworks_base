@@ -4375,6 +4375,14 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * @hide
+         */
+        public static final String OMNIJAWS_WEATHER_ICON_PACK = "omnijaws_weather_icon_pack";
+         /** @hide */
+        private static final Validator OMNIJAWS_WEATHER_ICON_PACK_VALIDATOR =
+                ANY_STRING_VALIDATOR;
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -4467,6 +4475,7 @@ public final class Settings {
             HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT,
             HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL,
             HASH_LOCKSCREEN_MEDIA_METADATA,
+            OMNIJAWS_WEATHER_ICON_PACK,
         };
 
         /**
@@ -4613,6 +4622,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT);
             PRIVATE_SETTINGS.add(HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL);
             PRIVATE_SETTINGS.add(HASH_LOCKSCREEN_MEDIA_METADATA);
+            PRIVATE_SETTINGS.add(OMNIJAWS_WEATHER_ICON_PACK);
         }
 
         /**
@@ -4739,6 +4749,7 @@ public final class Settings {
             VALIDATORS.put(HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT, HASH_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT_VALIDATOR);
             VALIDATORS.put(HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL, HASH_LOCKSCREEN_QUICK_UNLOCK_CONTROL_VALIDATOR);
             VALIDATORS.put(HASH_LOCKSCREEN_MEDIA_METADATA, HASH_LOCKSCREEN_MEDIA_METADATA_VALIDATOR);
+            VALIDATORS.put(OMNIJAWS_WEATHER_ICON_PACK, OMNIJAWS_WEATHER_ICON_PACK_VALIDATOR);
         }
 
         /**
