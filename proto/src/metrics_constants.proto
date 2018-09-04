@@ -6119,5 +6119,10 @@ message MetricsEvent {
     // ---- End P Constants, all P constants go above this line ----
     // Add new aosp constants above this line.
     // END OF AOSP CONSTANTS
+
+    // ACTION: Custom HashOS metrics
+    HASH_SETTINGS = 9000;
+
+    CUSTOM_QUICK_TILES = 9003;
   }
 }
