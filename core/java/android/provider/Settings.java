@@ -4200,6 +4200,14 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * @hide
+         */
+        public static final String HASH_USE_OLD_MOBILETYPE = "use_old_mobiletype";
+         /** @hide */
+        private static final Validator HASH_USE_OLD_MOBILETYPE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * Custom button brightness value for manual mode
          *
          * @hide
@@ -4431,6 +4439,7 @@ public final class Settings {
             HASH_QS_QUICKBAR_COLUMNS,
             HASH_QS_PANEL_BG_ALPHA,
             HASH_NAVIGATION_BAR_SHOW,
+            HASH_USE_OLD_MOBILETYPE,
             HASH_SCREENSHOT_SHUTTER_SOUND,
             HASH_SHOW_BATTERY_IMAGE,
             HASH_BATTERY_LIGHT_ENABLED,
@@ -4569,6 +4578,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_QS_QUICKBAR_COLUMNS);
             PRIVATE_SETTINGS.add(HASH_QS_PANEL_BG_ALPHA);
             PRIVATE_SETTINGS.add(HASH_NAVIGATION_BAR_SHOW);
+            PRIVATE_SETTINGS.add(HASH_USE_OLD_MOBILETYPE);
             PRIVATE_SETTINGS.add(HASH_SCREENSHOT_SHUTTER_SOUND);
             PRIVATE_SETTINGS.add(HASH_CUSTOM_BUTTON_BRIGHTNESS);
             PRIVATE_SETTINGS.add(HASH_CUSTOM_BUTTON_USE_SCREEN_BRIGHTNESS);
@@ -4689,6 +4699,7 @@ public final class Settings {
             VALIDATORS.put(HASH_QS_QUICKBAR_COLUMNS, HASH_QS_QUICKBAR_COLUMNS_VALIDATOR);
             VALIDATORS.put(HASH_QS_PANEL_BG_ALPHA, HASH_QS_PANEL_BG_ALPHA_VALIDATOR);
             VALIDATORS.put(HASH_NAVIGATION_BAR_SHOW, HASH_NAVIGATION_BAR_SHOW_VALIDATOR);
+            VALIDATORS.put(HASH_USE_OLD_MOBILETYPE, HASH_USE_OLD_MOBILETYPE_VALIDATOR);
             VALIDATORS.put(HASH_SCREENSHOT_SHUTTER_SOUND,
                     HASH_SCREENSHOT_SHUTTER_SOUND_VALIDATOR);
             VALIDATORS.put(HASH_CUSTOM_BUTTON_BRIGHTNESS, HASH_CUSTOM_BUTTON_BRIGHTNESS_VALIDATOR);
