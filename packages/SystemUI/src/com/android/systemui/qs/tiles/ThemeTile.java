@@ -292,7 +292,7 @@ public class ThemeTile extends QSTileImpl<BooleanState> {
 
         @Override
         public int getMetricsCategory() {
-            return MetricsEvent.EXTENSIONS;
+            return MetricsEvent.HASH_SETTINGS;
         }
 
         @Override
@@ -357,7 +357,7 @@ public class ThemeTile extends QSTileImpl<BooleanState> {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.EXTENSIONS;
+        return MetricsEvent.HASH_SETTINGS;
     }
 
     @Override
