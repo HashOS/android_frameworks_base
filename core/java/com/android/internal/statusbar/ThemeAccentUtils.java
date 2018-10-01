@@ -58,16 +58,12 @@ public class ThemeAccentUtils {
         "com.android.system.theme.dark", // 0
         "com.android.settings.theme.dark", // 1
         "com.android.systemui.theme.dark", // 2
-        "com.android.dialer.theme.dark", //3
-        "com.android.documentsui.theme.dark", //4
     };
 
     private static final String[] BLACK_THEMES = {
         "com.android.system.theme.black", // 0
         "com.android.settings.theme.black", // 1
         "com.android.systemui.theme.black", // 2
-        "com.android.dialer.theme.black", //3
-        "com.android.documentsui.theme.black", //4
     };
 
     private static final String[] EXTENDED_THEMES = {
@@ -75,9 +71,6 @@ public class ThemeAccentUtils {
         "com.android.settings.theme.extended", // 1
         "com.android.systemui.theme.extended", // 2
         "com.accents.extendedgreen", //3
-        "com.android.dialer.theme.extended", //4
-        "com.android.documentsui.theme.extended", //5
-        "com.google.android.apps.wellbeing.theme.extended", //6
     };
 
     private static final String[] CHOCOLATE_THEMES = {
@@ -85,9 +78,6 @@ public class ThemeAccentUtils {
         "com.android.settings.theme.chocolate", // 1
         "com.android.systemui.theme.chocolate", // 2
         "com.accents.candyred", //3
-        "com.android.dialer.theme.chocolate", //4
-        "com.android.documentsui.theme.chocolate", //5
-        "com.google.android.apps.wellbeing.theme.chocolate", //6
     };
 
 
