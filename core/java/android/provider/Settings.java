@@ -4275,14 +4275,6 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
-         * @hide
-         */
-        public static final String HASH_SHOW_BATTERY_IMAGE = "status_bar_show_battery_image";
-         /** @hide */
-        private static final Validator HASH_SHOW_BATTERY_IMAGE_VALIDATOR =
-                BOOLEAN_VALIDATOR;
-
-        /**
          * Whether the battery light should be enabled (if hardware supports it)
          * The value is boolean (1 or 0).
          * @hide
@@ -4549,7 +4541,6 @@ public final class Settings {
             HASH_QS_PANEL_BG_ALPHA,
             HASH_NAVIGATION_BAR_SHOW,
             HASH_SCREENSHOT_SHUTTER_SOUND,
-            HASH_SHOW_BATTERY_IMAGE,
             HASH_BATTERY_LIGHT_ENABLED,
             HASH_BATTERY_LIGHT_ALLOW_ON_DND,
             HASH_BATTERY_LIGHT_LOW_BLINKING,
@@ -4703,7 +4694,6 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HASH_BUTTON_BACKLIGHT_ON_TOUCH_ONLY);
             PRIVATE_SETTINGS.add(HASH_HARDWARE_KEYS_DISABLE);
             PRIVATE_SETTINGS.add(HASH_BUTTON_EXTRA_KEY_MAPPING);
-            PRIVATE_SETTINGS.add(HASH_SHOW_BATTERY_IMAGE);
             PRIVATE_SETTINGS.add(HASH_BATTERY_LIGHT_ENABLED);
             PRIVATE_SETTINGS.add(HASH_BATTERY_LIGHT_ALLOW_ON_DND);
             PRIVATE_SETTINGS.add(HASH_BATTERY_LIGHT_LOW_BLINKING);
@@ -4838,7 +4828,6 @@ public final class Settings {
             VALIDATORS.put(HASH_HARDWARE_KEYS_DISABLE, HASH_HARDWARE_KEYS_DISABLE_VALIDATOR);
             VALIDATORS.put(HASH_BUTTON_EXTRA_KEY_MAPPING,
                     HASH_BUTTON_EXTRA_KEY_MAPPING_VALIDATOR);
-            VALIDATORS.put(HASH_SHOW_BATTERY_IMAGE, HASH_SHOW_BATTERY_IMAGE_VALIDATOR);
             VALIDATORS.put(HASH_BATTERY_LIGHT_ENABLED, HASH_BATTERY_LIGHT_ENABLED_VALIDATOR);
             VALIDATORS.put(HASH_BATTERY_LIGHT_ALLOW_ON_DND, HASH_BATTERY_LIGHT_ALLOW_ON_DND_VALIDATOR);
             VALIDATORS.put(HASH_BATTERY_LIGHT_LOW_BLINKING, HASH_BATTERY_LIGHT_LOW_BLINKING_VALIDATOR);
